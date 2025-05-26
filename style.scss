@@ -1,30 +1,184 @@
+
+
 // Задаём шрифты.
+
 @font-face {
     font-family: 'Formular';
-    src: url(./fonts/Formular-Black.woff2) format('woff2');
+    src: url(/fonts/Formular-Black.woff2) format('woff2');
     font-weight: 900;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Formular';
-    src: url(./fonts/Formular-Bold.woff2) format('woff2');
+    src: url(/fonts/Formular-Bold.woff2) format('woff2');
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Formular';
-    src: url(./fonts/Formular.woff2) format('woff2');
+    src: url(/fonts/Formular.woff2) format('woff2');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Formular';
-    src: url(./fonts/Formular-Light.woff2) format('woff2');
+    src: url(/fonts/Formular-Light.woff2) format('woff2');
     font-weight: 300;
     font-style: normal;
 }
-// 
+// Общие стили
+
+body {
+    font-family: 'Formular';
+    font-weight: 400;
+    line-height: 1.5em;
+
+    padding: 20px;
+}
+
+.logo {
+    display:flex;
+    align-items: center;
+    column-gap: 4px;
+    .logo__image {
+        width: 50px;
+        height: 74px;
+    }   
+    .logo__name {
+        font-weight: 900;
+        font-size: 24px;
+        
+    }
+}
+
+.container {
+    max-width: 1576px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+// Верстаем шапку
+.header {
+    // Стилизуем бургер кнопку
+    &__burger-button {
+        display: none;
+        width: 26px;
+        height: 16px;
+        position: relative;
+        padding-top: 37px;
+        border: none;
+        background: none;
+    }
+
+    &__burger-button > span {
+        width: 24px;
+        height: 4px;
+        top: 17px;
+        left: 0;
+        position: absolute;
+        border-radius: 100px;
+        background-color: #A78BFA;
+        display: block;
+    }
+    &__burger-button::before,
+    &__burger-button::after {
+        content: '';
+        display: block;
+        width: 24px;
+        height: 4px;
+        background-color: #A78BFA;
+        border-radius: 100px;
+        position: absolute;
+        left: 0;
+    }
+    //
+    &__burger-button::before {
+        top: 10px; /* Середина кнопки */
+    }
+
+    &__burger-button::after {
+        bottom: 10px; /* Нижняя линия */
+    }
+
+    &__price-burger {
+        display: none;
+    }
+    //
+    &__container {
+        
+        
+    }
+    &__top-info {
+        display: flex;
+    }
+    &__link-and-nav-wrapper {
+        margin-top: 12px;
+    }
+    &__logo {
+        margin-right: auto;
+    }
+    &__price {
+        display: flex;
+        padding-right: 12px;
+        flex-direction: column;
+        align-items: flex-end;
+        border-right: 1px solid #A78BFA;
+    }
+    &__price-item {
+        font-size: 16px;
+        font-weight: 400;
+    }
+    &__number {
+        display: flex;
+        flex-direction: column;
+        padding-left: 12px;
+    }
+    &__number-link {
+        text-decoration: none;
+        font-size: 36px;
+        font-weight: 900;
+        line-height: 40px;
+        color: #111827;
+        row-gap: 4px;
+    }
+    &__number-text {
+        font-size: 24px;
+        font-weight: 300;
+    }
+    &__nav {
+        display: flex;
+        flex-basis: 100%;
+        justify-content: space-between;
+        padding: 12px 0;
+        border-top: 2px solid #A78BFA;
+        border-bottom: 2px solid #A78BFA;
+        margin-bottom: 12px;
+    }
+    &__nav-list {
+        display: flex;
+        column-gap: 24px;
+        padding: 10px 0;
+    }
+    &__nav-item {
+    }
+    &__nav-list-link {
+        text-decoration: none;
+        color: #111827;
+        font-size: 16px;
+        
+    }
+    &__leave-link {
+        text-decoration: none;
+        color: #F9FAFB;
+        font-size: 16px;
+        font-weight: 700;
+        background-color: #8B5CF6;
+        padding: 10px 28px; 
+        border-radius: 4px;
+    }
+    
+}
 

@@ -1,0 +1,35 @@
+@media all and (max-width: 1536px) {
+    .header__price {
+        display: none;
+    }
+    .header__price-burger {
+        display: block;
+    }
+    .header__burger-price-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .header__price-item {
+        text-align: center;
+    }
+}
+
+@media all and (max-width: 1024px) {
+    .header__price-item {
+        font-size: 14px;
+    }
+    .header__number-text {
+        display: none;
+    }
+    .header__number {
+        justify-content: center; 
+    }
+    .header__number-link {
+        font-size: 20px;
+    }
+    .header__burger-button {
+        display: block;
+        align-self: center;
+        margin-left: 16px;
+    }
+}
